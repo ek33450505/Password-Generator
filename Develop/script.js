@@ -1,4 +1,14 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
+// Start Password variable vaules
+// Special characters
+var specialCharacters =  ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+// Uppercase letters
+var UpperCasedCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "Y", "U", "V", "W", "X", "Y", "Z"];
+// Lowercase Characters
+varlowerCasedCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// Numeric Characters
+var numericCharacters = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 // Get references to the #generate element
