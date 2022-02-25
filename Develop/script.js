@@ -1,12 +1,15 @@
-// The Password generator will provide a password with 8-50  characters based on criteria the user specifies.
+// The Password generator will provide a password with 8-128 characters based on criteria the user specifies.
 
 //Assignment Code + Event Listener to prompt questions when button pushed
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-// Various Arrays 
+// Number variables 
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// Special character variables
 var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+// Lowercase letter variables
 var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// Uppercase letter variables
 var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Variable Declaration 
@@ -34,7 +37,7 @@ function generatePassword() {
     var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
     var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
     var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");
-    
+
       // Loop if answer is outside the parameters 
       while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
         alert("You must choose at least one parameter");
@@ -44,7 +47,7 @@ function generatePassword() {
         var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");   
     } 
 
-      // Assign an action to the password parameters NEED TO FIX THIS
+      // Assign an action to the password parameters 
       var passwordCharacters = []
       
     if (confirmSpecialCharacter) {
